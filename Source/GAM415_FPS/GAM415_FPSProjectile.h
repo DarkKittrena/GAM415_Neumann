@@ -23,21 +23,27 @@ class AGAM415_FPSProjectile : public AActor
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
 	UProjectileMovementComponent* ProjectileMovement;
 
+		//Heather: Adds a static mesh to the projectile
 	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* ballMesh;
 
+		//Heather: Adds a material to the projectile
 	UPROPERTY(EditAnywhere)
 	UMaterial* baseMat;
 
+		//Heather: Adds a random color to the projectile
 	UPROPERTY()
 	FLinearColor randColor;
 
+		//Heather: Adds a material instance to the projectile
 	UPROPERTY(EditAnywhere)
 	UMaterialInterface* projMat;
 
+		//Heather: Adds a dynamic material instance to the projectile
 	UPROPERTY()
 	UMaterialInstanceDynamic* dmiMat;
 
+		//Heather: Adds a particle system to the projectile
 	UPROPERTY(EditAnywhere)
 	UNiagaraSystem* colorP;
 
