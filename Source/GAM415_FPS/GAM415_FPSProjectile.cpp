@@ -8,6 +8,7 @@
 #include "Components/SphereComponent.h"
 #include "NiagaraFunctionLibrary.h"
 #include "NiagaraComponent.h"
+#include "PerlinProcTerrain.h"
 
 AGAM415_FPSProjectile::AGAM415_FPSProjectile() 
 {
@@ -94,5 +95,14 @@ void AGAM415_FPSProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherAct
 			//Heather: Sets the random color and frame number parameters of the decal material instance
 		MatInst->SetVectorParameterValue("Color", randColor);
 		MatInst->SetScalarParameterValue("Frame", frameNum);
+
+			//Heather: Checks if the other actor is a procedural terrain actor
+		APerlinProcTerrain* procTerrain = Cast<APerlinProcTerrain>(OtherActor);
+
+			//Heather: If the other actor is a procedural terrain actor, call the AlterMesh function of the procedural terrain actor and pass in the impact point of the hit
+		if (procTerrain) 
+		{
+			procTerrain->AlterMesh(Hit.ImpactPoint);
+		}
 	}
 }
