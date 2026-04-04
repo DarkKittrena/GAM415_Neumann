@@ -47,6 +47,10 @@ protected:
 	virtual void BeginPlay();
 
 public:
+
+		//Heather: Teleporting bool to check if the player is teleporting or not, so we can disable input while teleporting
+	UPROPERTY(EditAnywhere)
+		bool isTeleporting;
 		
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
