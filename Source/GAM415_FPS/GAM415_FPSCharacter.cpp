@@ -50,6 +50,12 @@ void AGAM415_FPSCharacter::BeginPlay()
 		}
 	}
 
+	if(ObjWidget)
+	{
+		ObjWidget->UpdaterifleOBJ(bObtainedRifle);
+		ObjWidget->AddToViewport();
+	}
+
 }
 
 // Input
@@ -101,6 +107,11 @@ void AGAM415_FPSCharacter::Look(const FInputActionValue& Value)
 void AGAM415_FPSCharacter::SetHasRifle(bool bNewHasRifle)
 {
 	bHasRifle = bNewHasRifle;
+
+	if(ObjWidget)
+	{
+		ObjWidget->UpdaterifleOBJ(bObtainedRifle);
+	}
 }
 
 bool AGAM415_FPSCharacter::GetHasRifle()

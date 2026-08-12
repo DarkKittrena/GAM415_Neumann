@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
+#include "ObjectiveWidget.h"
 #include "GAM415_FPSCharacter.generated.h"
 
 class UInputComponent;
@@ -55,6 +56,12 @@ public:
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UObjectiveWidget* ObjWidget;
+
+	UPROPERTY()
+	bool bObtainedRifle;
 
 	/** Bool for AnimBP to switch to another animation set */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Weapon)
