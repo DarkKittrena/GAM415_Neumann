@@ -46,7 +46,6 @@ void APortals::BeginPlay()
 	{
 		mesh->SetMaterial(0, mat);
 	}
-	
 }
 
 // Called every frame

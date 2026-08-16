@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
+#include "OBJWidget.h"
 #include "GAM415_FPSCharacter.generated.h"
 
 class UInputComponent;
@@ -51,6 +52,12 @@ public:
 		//Heather: Teleporting bool to check if the player is teleporting or not, so we can disable input while teleporting
 	UPROPERTY(EditAnywhere)
 		bool isTeleporting;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UOBJWidget* OBJWidget;
+
+	UPROPERTY()
+	bool bObtainedRifle;
 		
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))

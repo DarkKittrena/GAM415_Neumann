@@ -9,7 +9,6 @@
 #include "EnhancedInputSubsystems.h"
 
 
-//////////////////////////////////////////////////////////////////////////
 // AGAM415_FPSCharacter
 
 AGAM415_FPSCharacter::AGAM415_FPSCharacter()
@@ -50,10 +49,9 @@ void AGAM415_FPSCharacter::BeginPlay()
 			Subsystem->AddMappingContext(DefaultMappingContext, 0);
 		}
 	}
-
 }
 
-//////////////////////////////////////////////////////////////////////////// Input
+// Input
 
 void AGAM415_FPSCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
