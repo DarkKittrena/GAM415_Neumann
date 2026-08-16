@@ -64,7 +64,6 @@ void APerlinProcTerrain::CreateVertices()
 		{
 				//Heather: Use Perlin noise to generate the Z value for the vertex based on the X and Y values. Then add the vertex to the vertices array and the UV coordinate to the UV0 array.
 			float Z = FMath::PerlinNoise2D(FVector2D(X * NoiseScale + 0.1, Y * NoiseScale + 0.1)) * ZMultiplier;
-			GEngine->AddOnScreenDebugMessage(-1, 999.0f, FColor::Yellow, FString::Printf(TEXT("Z: %f"), Z));
 			vertices.Add(FVector(X * Scale, Y * Scale, Z));
 			UV0.Add(FVector2D(X * UVScale, Y * UVScale));
 			

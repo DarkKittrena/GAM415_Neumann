@@ -4,22 +4,25 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
-#include "ObjectiveWidget.generated.h"
+#include "OBJWidget.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class GAM415_FPS_API UObjectiveWidget : public UUserWidget
+class GAM415_FPS_API UOBJWidget : public UUserWidget
 {
 	GENERATED_BODY()
 
 public:
 
 	UFUNCTION(BlueprintImplementableEvent)
-	void UpdaterifleOBJ(bool bObtainedRifle);
+	void UpdateOBJRifle(bool bObtainedRifle);
 
 	UFUNCTION(BlueprintImplementableEvent)
-	void UpdateenemiesOBJ(float enemiesKilled);
+	void UpdateOBJenemies(float enemieskilled);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void UpdateOBJPortal(float portalactivated);
 	
 };
